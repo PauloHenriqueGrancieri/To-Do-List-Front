@@ -1,0 +1,432 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #C1C8FB;
+    color: #fff;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-color: #1B277D;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    height: 100vh;
+    margin: 100px 10px 10px;
+}
+
+.left-panel {
+    text-align: center;
+    flex: 0 0 25%;
+    width: 100px;
+    height: 100vh;
+    padding: 20px;
+    background-color: #7584F9;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    margin-right: 10px;
+    position: relative;
+}
+
+.left-panel h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.left-panel ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.left-panel li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.left-panel li:hover {
+    color: #007bff;
+}
+
+.left-panel button {
+    display: block;
+    width: 100%;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+    background-color: #4D648D;
+    color: #FFFFFF;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+
+.left-panel button:hover {
+    background-color: #303ca1;
+    cursor: pointer;
+}
+
+.add-taskList-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-height: 30px;
+    max-width: 30px;
+}
+
+.add-taskList-btn i {
+    display: block;
+    margin: auto;
+}
+
+.add-taskList-btn:hover {
+    background-color: #2824a1;
+    cursor: pointer;
+}
+
+.tasklistpopup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(42, 49, 125, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tasklistpopup {
+    position: fixed;
+    height: 150px;
+    background-color: rgba(42, 49, 125, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-list-popup-content {
+    position: fixed;
+    align-items: center;
+    background-color: #2A317D;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    height: 100px;
+    width: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    padding: 50px;
+}
+
+.task-list-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    max-width: 10px;
+    background-color: transparent;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.task-list-card{
+    text-align: center;
+    position: relative;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    background-color: #5F6BC9;
+    height: 30px;
+    line-height: 0px;
+}
+
+.select-task-list button {
+    width: 100%;
+    max-width: 300px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    justify-content: center;
+}
+
+.card-buttons button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    margin: 5px;
+    padding: 0;
+}
+
+.card-buttons button i {
+    font-size: 16px;
+}
+
+.card-buttons button:first-child {
+    margin-right: 40px;
+}
+
+.right-panel {
+    flex: 1;
+    flex-direction: column;
+    height: 100vh;
+    display: flex;
+    padding: 20px;
+    background-color: #939BF9;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.right-panel h2 {
+    text-align: center;
+}
+
+.taskitempopup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(42, 49, 125, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-item-popup-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    max-width: 300px;
+    max-height: 300px;
+    height: auto;
+    width: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.add-task-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+    max-height: 300px;
+    height: 100%;
+    width: 100%;
+    background-color: #2A317D;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    width: 30%;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ced4da;
+    font-size: 12px;
+    margin-bottom: 0.5rem;
+    flex: 1;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+}
+
+.btn-primary, .btn-default {
+    color: #FFFFFF;
+    background-color: #343A81;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover, .btn-default:hover {
+    background-color: #2A317D;
+}
+
+.add-task-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.add-task-btn:hover {
+    background-color: #2824a1;
+    cursor: pointer;
+}
+
+.task-card {
+    background-color: #777EC9;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.task-card h3 {
+    margin-top: 0;
+}
+
+.task-card input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.task-card .task-title {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+}
+
+.task-card .creation-date {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-style: italic;
+    color: black;
+}
+
+/* CSS para o botão de editar */
+.task-card .edit-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 50px;
+    cursor: pointer;
+}
+
+/* CSS para o botão de excluir */
+.task-card .delete-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.task-details p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 1100px;
+    max-height: 200px;
+}
+
+.task-details.expand {
+    max-height: none;
+    overflow: visible;
+}
+
+.task-details.expand p {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: initial;
+}
+
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 0;
+}
